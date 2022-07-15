@@ -1,8 +1,8 @@
 {
   "private": true,
   "scripts": {
-    "dev": "node server/index.ts",
-    "server": "ts-node --project tsconfig.server.json server/index.ts",
+    "dev": "ts-node --project tsconfig.server.json server/index.ts",
+    "server:dev": "node server/index.ts",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server/index.ts",
     "start:prod": "next start",

@@ -30,6 +30,7 @@ const SearchModule = () => {
       <form onSubmit={handleSubmit}>
         <MLInput
           onChange={(e) => setSearch(e.target.value)}
+          onClick={handleSubmit}
           placeholder='Buscar productos, marcas y más...'
           name='search'
         />
