@@ -16,7 +16,7 @@ const handle = app.getRequestHandler()
 app.prepare().then(() => {
   const server = express()
 
-  server.all('*', (req, res) => {
+  server.all('*', (req: any, res: any) => {
     return handle(req, res)
   })
 
@@ -24,3 +24,5 @@ app.prepare().then(() => {
     console.log(`> Ready on http://localhost:${port}`)
   })
 })
+
+export {}
