@@ -1,10 +1,8 @@
 import { NextApiHandler } from 'next'
 import { ProductService } from '@api/meli-api/services/product.service'
-import enablePublicAccess from '@cors'
 
 const getProductDetail: NextApiHandler = async (request, response) => {
   try {
-    await enablePublicAccess(request, response)
     const id = `${request.query.id}`
     if (id) {
       const { getProductDescription, getProductDetail } = ProductService()

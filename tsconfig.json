@@ -19,8 +19,7 @@
       "*": ["node_modules/*"],
       "@/*": ["src/*"],
       "@api*": ["api/*"],
-      "@/types*": ["types/*"],
-      "@cors": ["cors-middleware.ts"]
+      "@/types*": ["types/*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
