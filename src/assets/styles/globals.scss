@@ -24,8 +24,10 @@
   $tr-gray: var(--tr-gray);
 }
 
-@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+// @import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+
 body {
-  font-family: 'Proxima Nova', -apple-system, Roboto, Arial, sans-serif,
+  font-family: 'Monsterrat', -apple-system, Roboto, Arial, sans-serif,
     sans-serif;
 }

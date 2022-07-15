@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "node server/index.ts",
     "build": "next build",
-    "start": "cross-env NODE_ENV=production node server/index.ts"
+    "start": "cross-env NODE_ENV=production node server/index.ts",
+    "start:prod": "next start"
   },
   "dependencies": {
     "axios": "^0.27.2",
