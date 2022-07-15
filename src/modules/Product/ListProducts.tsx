@@ -11,7 +11,7 @@ const ListProducts = ({ products }: PropsListProducts) => {
     return index !== products.length - 1
   }
 
-  return (
+  return products.length ? (
     <div className=' max-w-screen-xl mx-auto mt-10 bg-white-0 rounded-md p-10'>
       {products.map((product: IProduct, index: number) => (
         <ProductItem
@@ -21,6 +21,9 @@ const ListProducts = ({ products }: PropsListProducts) => {
         />
       ))}
     </div>
+  ) : (
+    // Loader
+    <div></div>
   )
 }
 

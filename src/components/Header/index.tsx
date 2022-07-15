@@ -31,10 +31,10 @@ const Header = () => {
                   <IoLocationOutline size={25} />
                 </div>
                 <div className='leading-3'>
-                  <span className='text-xs font-thin text-gray-100'>
+                  <span className='text-xs font-normal text-gray-100'>
                     Enviar a Sebastián
                   </span>
-                  <p className='text-sm font-extralight'>Calle 45 #192-31</p>
+                  <p className='text-sm  font-medium'>Calle 45 #192-31</p>
                 </div>
               </div>
             </div>

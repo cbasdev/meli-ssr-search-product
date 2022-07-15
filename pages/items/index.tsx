@@ -2,11 +2,12 @@ import { useEffect, useState } from 'react'
 
 import { useRouter } from 'next/router'
 import ListProducts from '@/modules/Product/ListProducts'
+import { IProduct } from '@/typesProduct'
 
 const Items = () => {
   const router = useRouter()
   const { search } = router.query || ''
-  const [products, setProducts] = useState([])
+  const [products, setProducts] = useState([] as IProduct[])
 
   const fetchProducts = async (search?: string | string[]) => {
     const { data } = await fetch(`/api/products`, {

@@ -24,25 +24,8 @@
   $tr-gray: var(--tr-gray);
 }
 
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
 body {
-  @font-face {
-    font-family: 'Proxima Nova';
-    src: url('/src/assets/fonts/proximanova-light.woff2');
-    font-weight: 100;
-  }
-
-  @font-face {
-    font-family: 'Proxima Nova';
-    src: url('/src/assets/fonts/proximanova-regular.woff2');
-    font-weight: normal;
-  }
-
-  @font-face {
-    font-family: 'Proxima Nova';
-    src: url('/src/assets/fonts/proximanova-semibold.woff2');
-    font-weight: 500;
-  }
-
   font-family: 'Proxima Nova', -apple-system, Roboto, Arial, sans-serif,
     sans-serif;
 }

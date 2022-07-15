@@ -7,3 +7,7 @@ export interface IProduct {
   }
   price: number
 }
+
+export interface IProductDetails {
+  plain_text: string
+}

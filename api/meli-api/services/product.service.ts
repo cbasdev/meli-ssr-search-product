@@ -3,6 +3,7 @@ import { AxiosResponse } from 'axios'
 
 export interface IProductService {
   getProducts(query: string): Promise<AxiosResponse>
+  getProductDetail(id: string): Promise<AxiosResponse>
 }
 
 export const ProductService = (): IProductService => {
@@ -13,7 +14,14 @@ export const ProductService = (): IProductService => {
     return httpRequest.get(`sites/MLA/search?q=${query}`)
   }
 
+  const getProductDetail = async (id: string): Promise<AxiosResponse> => {
+    return httpRequest.get(
+      `https://api.mercadolibre.com/items/${id}/description`
+    )
+  }
+
   return {
     getProducts,
+    getProductDetail,
   }
 }
