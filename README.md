@@ -8,6 +8,7 @@ Development of the search module for mercadolibre products Using Server Side Ren
 
 I use Vercel because it combines the best developer experience with an obsessive focus on end-user performance.
 
+For some reason, chrome detects the page as a danger of sniffing, I guess because of its great resemblance to the free market page.
 You can see the project link by _[CLICKING HERE](https://meli-ssr-search-product.vercel.app)_
 
 ## Pre-Requisites 📋
@@ -30,13 +31,19 @@ You can see the project link by _[CLICKING HERE](https://meli-ssr-search-product
 
 ## Technologies 📱
 
-- **NextJS:**
-  The framework.
-- **TailwindCSS:**
+- **NextJS ▶️ (Vercel):**
+  Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
+- **Express ▶️ (OpenJS Foundation):**
+  Infrastructure of NodeJs Server
+- **React ▶️ (Meta):**
+  The most popular JavaScript library for building user interfaces.
+- **TypeScript ▶️ (Microsoft):**
+  Strongly typed programming language that builds on JavaScript, giving you better tooling at any scale.
+- **Playwright ▶️ (Microsoft):**
+  Enables reliable end-to-end testing for modern web apps.
+- **TailwindCSS ▶️ (TailwindCSS):**
   The reason for using this technology is due to the versatility, speed and dynamism when creating custom designs.
-- **Axios:**
-  I consider it to be the most used tool to make APIS requests easily, in addition to being incredibly easy to scale for a bridge architecture.
-- **Sass:**
+- **Sass ▶️ (Sass):**
   I use this css preprocessor due to the versatility and speed that allows me to create designs quickly and scalable..
 
 ## Contributions 👥
