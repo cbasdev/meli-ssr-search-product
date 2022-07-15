@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --pr-yellow: #fff159;
+  --white: #fff;
+  --pr-blue: #3583fa;
+  --sr-blue: #2968c8;
+  --tr-blue: #e5effb;
+  --pr-green: #00a650;
+  --pr-gray: #bfbfbf;
+  --sr-gray: #00000080;
+  --tr-gray: #ededed;
+
+  $pr-yellow: var(--pr-yellow);
+  $white: var(--white);
+  $pr-blue: var(--pr-blue);
+  $sr-blue: var(--sr-blue);
+  $tr-blue: var(--tr-blue);
+  $pr-green: var(--pr-green);
+  $pr-gray: var(--pr-gray);
+  $sr-gray: var(--sr-gray);
+  $tr-gray: var(--tr-gray);
+}
+
+body {
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('/src/assets/fonts/proximanova-light.woff2');
+    font-weight: 100;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('/src/assets/fonts/proximanova-regular.woff2');
+    font-weight: normal;
+  }
+
+  @font-face {
+    font-family: 'Proxima Nova';
+    src: url('/src/assets/fonts/proximanova-semibold.woff2');
+    font-weight: 500;
+  }
+
+  font-family: 'Proxima Nova', -apple-system, Roboto, Arial, sans-serif,
+    sans-serif;
+}
