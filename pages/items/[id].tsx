@@ -10,9 +10,14 @@ const ProductDetails = () => {
 
   const fetchProductDetail = async (id?: string | string[]) => {
     try {
-      const { details, description } = await fetch(`/api/products/${id}`, {
-        method: 'GET',
-      }).then((res) => res.json())
+      const { details, description } = await fetch(
+        `/api/products/ProductDetails`,
+        {
+          method: 'POST',
+          body: JSON.stringify({ id }),
+        }
+      ).then((res) => res.json())
+
       if (details) {
         setProductDetails({
           ...details,
