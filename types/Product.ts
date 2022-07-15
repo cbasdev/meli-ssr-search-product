@@ -6,8 +6,10 @@ export interface IProduct {
     state_name: string
   }
   price: number
+  condition: string
+  sold_quantity: number
 }
 
-export interface IProductDetails {
+export interface IProductDetails extends IProduct {
   plain_text: string
 }

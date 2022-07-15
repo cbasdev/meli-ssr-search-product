@@ -1,24 +1,44 @@
 import React from 'react'
-import { IProduct } from '@/types/Product'
 import Image from 'next/image'
+
+/** Types */
+import { IProduct } from '@/types/Product'
+
+/** Hooks */
 import { useMoney } from '@/hooks/useMoney'
 import { useRouter } from 'next/router'
+
+/** Assets */
+import defaultImage from '@/assets/img/product-delivery.svg'
+
+/** Components */
+import MLButton, { ButtonType } from '@/meli-ui/MLButton'
 
 interface PropsProductItem {
   product: IProduct
   border: boolean
+  width?: number
+  height?: number
+  showButton?: boolean
 }
 
-const ProductItem = ({ product, border }: PropsProductItem) => {
+const ProductItem = ({
+  product,
+  border,
+  width,
+  height,
+  showButton,
+}: PropsProductItem) => {
   const router = useRouter()
 
   const { formatter } = useMoney('es-CO')
 
   function showDetails(id: string) {
-    console.log(id, 'details')
-    router.push({
-      pathname: `/items/${id}`,
-    })
+    if (router.query.id !== id) {
+      router.push({
+        pathname: `/items/${id}`,
+      })
+    }
   }
 
   return (
@@ -28,10 +48,10 @@ const ProductItem = ({ product, border }: PropsProductItem) => {
         onClick={() => showDetails(product.id)}
       >
         <Image
-          src={product.thumbnail}
+          src={product.thumbnail ? product.thumbnail : defaultImage}
           alt='image-alt-text'
-          width={100}
-          height={100}
+          width={width ? width : 100}
+          height={height ? height : 100}
           unoptimized
         />
       </div>
@@ -43,6 +63,15 @@ const ProductItem = ({ product, border }: PropsProductItem) => {
           {product.title}
         </h2>
         <p className='text-2xl'>{formatter.format(product.price)}</p>
+        {showButton && (
+          <div className='flex flex-col gap-2 my-3'>
+            <MLButton variant={ButtonType.Primary} text='Comprar ahora' />
+            <MLButton
+              variant={ButtonType.Secondary}
+              text='Agregar al carrito'
+            />
+          </div>
+        )}
       </div>
     </div>
   )

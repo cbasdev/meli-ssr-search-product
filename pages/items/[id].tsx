@@ -10,24 +10,29 @@ const ProductDetails = () => {
 
   const fetchProductDetail = async (id?: string | string[]) => {
     try {
-      const { data } = await fetch(`/api/products/${id}`, {
+      const { details, description } = await fetch(`/api/products/${id}`, {
         method: 'GET',
       }).then((res) => res.json())
-      if (data) {
-        setProductDetails(data)
+      if (details) {
+        setProductDetails({
+          ...details,
+          ...description,
+        })
       }
     } catch (error) {
-      console.log('error')
+      console.log(error)
     }
   }
 
   useEffect(() => {
-    fetchProductDetail(id)
+    if (id) {
+      fetchProductDetail(id)
+    }
   }, [id])
 
   return (
     <div>
-      <ProductDescription description={productDetails.plain_text} />
+      <ProductDescription productDetails={productDetails} />
     </div>
   )
 }

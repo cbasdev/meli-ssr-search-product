@@ -1,10 +1,16 @@
 import React from 'react'
+import Link from 'next/link'
+
+/** Modules */
+import SearchModule from '@/modules/Search'
+
+/** Assets */
 import logo from '@/assets/img/logo.png'
 import news from '@/assets/img/news.png'
 import { IoLocationOutline } from 'react-icons/io5'
-import { useImage } from '@/hooks/useImage'
 
-import SearchModule from '@/modules/Search'
+/** Hooks */
+import { useImage } from '@/hooks/useImage'
 
 const Header = () => {
   const { ImageOptimized: Logo } = useImage({
@@ -24,7 +30,11 @@ const Header = () => {
           <div className='flex w-full gap-6'>
             <div className='flex flex-col gap-3 min-w-max '>
               <div className='w-36'>
-                <Logo />
+                <Link href='/'>
+                  <a>
+                    <Logo />
+                  </a>
+                </Link>
               </div>
               <div className='flex justify-center gap-1 w-full '>
                 <div className='flex flex-col justify-center'>

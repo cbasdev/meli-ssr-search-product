@@ -5,10 +5,16 @@ const getProductDetail: NextApiHandler = async (request, response) => {
   try {
     const id = `${request.query.id}`
     if (id) {
-      const { getProductDetail } = ProductService()
-      const productDetail: any = await getProductDetail(id)
+      const { getProductDescription, getProductDetail } = ProductService()
+      const productDescription = await getProductDescription(id)
+      const productDetail = await getProductDetail(id)
       response.status(200).json({
-        data: productDetail.data,
+        details: productDetail.data,
+        description: productDescription.data,
+        author: {
+          name: 'Sebastian',
+          lastname: 'Velez',
+        },
       })
     } else {
       console.log('No existe valor de busqueda')

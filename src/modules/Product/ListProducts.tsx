@@ -1,5 +1,5 @@
 import React from 'react'
-import ProductItem from '@/components/ProductItem/ProductItem'
+import ProductItem from '@/components/ProductItem'
 import { IProduct } from '@/types/Product'
 
 interface PropsListProducts {
