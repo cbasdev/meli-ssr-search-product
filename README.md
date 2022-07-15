@@ -8,7 +8,7 @@ Development of the search module for mercadolibre products Using Server Side Ren
 
 I use Vercel because it combines the best developer experience with an obsessive focus on end-user performance.
 
-You can see the project link by _[CLICKING HERE](https://pokedex-cbasdev.vercel.app/)_
+You can see the project link by _[CLICKING HERE](https://meli-ssr-search-product.vercel.app)_
 
 ## Pre-Requisites 📋
 
@@ -30,6 +30,8 @@ You can see the project link by _[CLICKING HERE](https://pokedex-cbasdev.vercel.
 
 ## Technologies 📱
 
+- **NextJS:**
+  The framework.
 - **TailwindCSS:**
   The reason for using this technology is due to the versatility, speed and dynamism when creating custom designs.
 - **Axios:**
