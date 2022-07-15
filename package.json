@@ -1,0 +1,32 @@
+{
+  "private": true,
+  "scripts": {
+    "dev": "node server/index.ts",
+    "build": "next build",
+    "start": "cross-env NODE_ENV=production node server/index.ts"
+  },
+  "dependencies": {
+    "axios": "^0.27.2",
+    "cross-env": "^7.0.2",
+    "express": "^4.17.1",
+    "next": "12.2.0",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.4.0",
+    "react-router-dom": "^6.3.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/node": "18.0.0",
+    "@types/react": "18.0.14",
+    "@types/react-dom": "18.0.5",
+    "autoprefixer": "^10.4.7",
+    "eslint": "8.18.0",
+    "eslint-config-next": "12.2.0",
+    "postcss": "^8.4.14",
+    "sass": "^1.53.0",
+    "tailwindcss": "^3.1.6",
+    "ts-node": "^9.1.1",
+    "typescript": "4.7.4"
+  }
+}
