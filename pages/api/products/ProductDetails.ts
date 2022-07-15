@@ -4,7 +4,6 @@ import enablePublicAccess from '@cors'
 
 const getProductDetail: NextApiHandler = async (request, response) => {
   try {
-    console.log(request.body)
     const { id } = JSON.parse(request.body)
     await enablePublicAccess(request, response)
 

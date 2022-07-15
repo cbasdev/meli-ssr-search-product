@@ -5,9 +5,10 @@ interface IInput {
   placeholder?: string
   onChange: React.ChangeEventHandler<HTMLInputElement> | undefined
   type?: React.HTMLInputTypeAttribute
+  name?: string
 }
 
-const MLInput = ({ placeholder, onChange, type }: IInput) => {
+const MLInput = ({ placeholder, onChange, type, name }: IInput) => {
   return (
     <>
       <div>
@@ -17,6 +18,7 @@ const MLInput = ({ placeholder, onChange, type }: IInput) => {
             type={type}
             placeholder={placeholder}
             onChange={onChange}
+            name={name}
           />
           <div className=' text-gray-50 flex border-l my-2 absolute inset-y-0 right-2 items-center pl-3 pointer-events-none'>
             <GoSearch />

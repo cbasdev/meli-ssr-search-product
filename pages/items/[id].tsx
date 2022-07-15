@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 import { IProductDetails } from '@/types/Product'
 import ProductDescription from '@/modules/Product/ProductDescription'
 
+/** express does not allow to use dynamic routes  */
+
 const ProductDetails = () => {
   const [productDetails, setProductDetails] = useState({} as IProductDetails)
   const router = useRouter()
