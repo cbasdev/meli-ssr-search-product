@@ -2,9 +2,11 @@
   "private": true,
   "scripts": {
     "dev": "node server/index.ts",
+    "server": "ts-node --project tsconfig.server.json server/index.ts",
     "build": "next build",
     "start": "cross-env NODE_ENV=production node server/index.ts",
-    "start:prod": "next start"
+    "start:prod": "next start",
+    "test:e2e": "npx playwright test"
   },
   "dependencies": {
     "@types/cors": "2.x",
@@ -30,7 +32,7 @@
     "postcss": "^8.4.14",
     "sass": "^1.53.0",
     "tailwindcss": "^3.1.6",
-    "ts-node": "^9.1.1",
+    "ts-node": "^10.6.0",
     "typescript": "4.7.4"
   }
 }

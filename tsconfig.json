@@ -20,7 +20,7 @@
       "@/*": ["src/*"],
       "@api*": ["api/*"],
       "@/types*": ["types/*"],
-      "@cors": ["cors-middleware.ts"],
+      "@cors": ["cors-middleware.ts"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

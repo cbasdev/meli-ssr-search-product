@@ -4,9 +4,8 @@
  *
  * Pending for refactoring
  */
-
-const express = require('express')
-const next = require('next')
+import express from 'express'
+import next from 'next'
 
 const port = 3000
 const dev = process.env.NODE_ENV !== 'production'
