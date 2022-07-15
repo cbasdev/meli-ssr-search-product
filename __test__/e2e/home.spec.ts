@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test'
 
-test('in Home not pass', async ({ page }) => {
+test('Test Home', async ({ page }) => {
   await page.goto('/')
-  await page.fill('#name', 'Peter')
-  await expect(page).toHaveTitle(/''/)
+  await expect(page).toHaveTitle(/Mercado Libre | Envíos a todo el país/)
+  await expect(page.locator('p').first()).toContainText('Calle 45 #192-31')
 })
