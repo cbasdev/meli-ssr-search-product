@@ -1,6 +1,6 @@
 # MELI-SSR-SEARCH-PRODUCTS
 
-[Click to Run](/#?flow=ask_to_seller)
+[Click to Run](flow=ask_to_seller)
 
 ## Description 👨‍💻
 
